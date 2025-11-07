@@ -11,9 +11,10 @@ body {
 }
 
 /* Header Section - Compact Navbar */
+/* Header Section - Centered Search Layout */
 header {
   background-color: rgba(0, 0, 0, 0.75);
-  padding: 10px 20px;
+  padding: 15px 40px; /* Slightly taller */
   color: #fff;
 }
 
@@ -21,15 +22,49 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
-/* Logo */
+/* Logo - Left Side */
 .logo h1 {
   margin: 0;
-  font-size: 1.6em;
+  font-size: 1.7em;
 }
 
-/* Navigation Links */
+/* Search - Center */
+.nav-search {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-search input {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 220px;
+  font-size: 0.95em;
+}
+
+.nav-search button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.nav-search button:hover {
+  background-color: #45a049;
+}
+
+/* Navigation Links - Right Side */
 nav ul {
   list-style: none;
   display: flex;
@@ -42,12 +77,13 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
+  transition: color 0.3s;
 }
 
 nav a:hover {
   color: #4CAF50;
-  transition: 0.3s;
 }
+
 
 /* Search Bar inside Navbar */
 .nav-search {
@@ -89,7 +125,7 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .hero-text h2 {
