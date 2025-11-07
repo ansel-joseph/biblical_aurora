@@ -3,66 +3,82 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url('images/simple_cross.jpg');
+  /*background-image: url('images/simple_cross.jpg');*/
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Optional: Makes the background stay fixed while scrolling */
   background-color: #f9f9f9; /* Fallback color if the image doesn't load */
 }
 
-/* Header Section */
+/* Header Section - Compact Navbar */
 header {
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 10px 20px;
   color: #fff;
-  padding: 20px;
+}
+
+.nav-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 }
 
-header .logo h1 {
-  font-size: 2em;
+/* Logo */
+.logo h1 {
+  margin: 0;
+  font-size: 1.6em;
 }
 
+/* Navigation Links */
 nav ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
+  margin: 0;
 }
 
 nav a {
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-weight: bold;
+  font-size: 1em;
 }
-/* Search Bar Styling */
-.search-bar {
+
+nav a:hover {
+  color: #4CAF50;
+  transition: 0.3s;
+}
+
+/* Search Bar inside Navbar */
+.nav-search {
   display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  align-items: center;
+  gap: 5px;
 }
 
-.search-bar input[type="text"] {
-  padding: 10px;
-  font-size: 16px;
-  width: 300px;
+.nav-search input {
+  padding: 6px 10px;
   border-radius: 5px;
-  border: 2px solid #ccc;
+  border: none;
+  outline: none;
+  width: 150px;
+  font-size: 0.9em;
 }
 
-.search-bar button {
-  padding: 10px;
-  font-size: 16px;
+.nav-search button {
+  padding: 6px 10px;
+  border: none;
   background-color: #4CAF50;
   color: white;
-  border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-.search-bar button:hover {
+.nav-search button:hover {
   background-color: #45a049;
+  transition: 0.3s;
 }
+
 
 /* Hero Section with Background Image (Optional) */
 .hero {
