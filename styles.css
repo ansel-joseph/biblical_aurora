@@ -1,21 +1,20 @@
-/* General Styles */
+
 body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  /*background-image: url('images/simple_cross.jpg');*/
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Optional: Makes the background stay fixed while scrolling */
-  background-color: #f9f9f9; /* Fallback color if the image doesn't load */
+  background-attachment: fixed;
+  background-color: #f9f9ff;
+  color: #2a2a3c; 
 }
 
-/* Header Section - Compact Navbar */
-/* Header Section - Centered Search Layout */
 header {
-  background-color: rgba(0, 0, 0, 0.75);
-  padding: 15px 40px; /* Slightly taller */
+  background: linear-gradient(135deg, #6a0dad, #8e24aa);
+  padding: 18px 40px;
   color: #fff;
+  box-shadow: 0 4px 10px rgba(106, 13, 173, 0.3);
 }
 
 .nav-container {
@@ -25,20 +24,24 @@ header {
   position: relative;
 }
 
-/* Logo - Left Side */
 .logo h1 {
   margin: 0;
-  font-size: 1.7em;
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 1px;
 }
 
-/* Search - Center */
 .nav-search {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 6px 10px;
+  border-radius: 8px;
 }
 
 .nav-search input {
@@ -48,23 +51,29 @@ header {
   outline: none;
   width: 220px;
   font-size: 0.95em;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #4a148c;
+}
+
+.nav-search input::placeholder {
+  color: #6a1b9a;
 }
 
 .nav-search button {
   padding: 8px 12px;
   border: none;
-  background-color: #4CAF50;
+  background-color: #7b2cbf;
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .nav-search button:hover {
-  background-color: #45a049;
+  background-color: #c1121f;
+  transform: scale(1.05);
 }
 
-/* Navigation Links - Right Side */
 nav ul {
   list-style: none;
   display: flex;
@@ -77,74 +86,46 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   font-size: 1em;
-  transition: color 0.3s;
+  transition: color 0.3s, text-shadow 0.3s;
 }
 
 nav a:hover {
-  color: #4CAF50;
+  color: #ff4b4b; 
+  text-shadow: 0 0 8px rgba(255, 75, 75, 0.6);
 }
 
-
-/* Search Bar inside Navbar */
-.nav-search {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-}
-
-.nav-search input {
-  padding: 6px 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  width: 150px;
-  font-size: 0.9em;
-}
-
-.nav-search button {
-  padding: 6px 10px;
-  border: none;
-  background-color: #4CAF50;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.nav-search button:hover {
-  background-color: #45a049;
-  transition: 0.3s;
-}
-
-
-/* Hero Section with Background Image (Optional) */
 .hero {
   background-size: cover;
   background-position: center;
-  height: 60vh; /* Adjust based on how much screen you want covered */
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: black;
+  color: #2a2a3c;
 }
 
 .hero-text h2 {
   font-size: 3em;
   margin-bottom: 20px;
+  color: #6a0dad;
 }
 
 .hero-text p {
   font-size: 1.5em;
   max-width: 600px;
+  color: #4a4a4a;
 }
 
-/* Featured Topics Section */
 .featured {
-  padding: 20px;
+  padding: 40px;
+  text-align: center;
 }
 
 .featured h3 {
   font-size: 2em;
+  color: #7b2cbf;
+  margin-bottom: 20px;
 }
 
 .featured ul {
@@ -156,12 +137,25 @@ nav a:hover {
   margin-bottom: 10px;
 }
 
-/* Footer Section */
+.featured a {
+  color: #6a0dad;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.featured a:hover {
+  color: #c1121f;
+  text-shadow: 0 0 6px rgba(193, 18, 31, 0.5);
+}
+
 footer {
-  background-color: #333;
+  background-color: #6a0dad;
   color: #fff;
-  padding: 20px;
+  padding: 25px;
   text-align: center;
+  font-size: 0.95em;
+  margin-top: 50px;
 }
 
 footer .contact-info ul {
@@ -169,4 +163,15 @@ footer .contact-info ul {
   padding: 0;
   display: flex;
   gap: 10px;
+  justify-content: center;
+}
+
+footer a {
+  color: #ffb6c1;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  text-shadow: 0 0 6px #c1121f;
 }
