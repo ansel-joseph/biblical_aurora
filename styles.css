@@ -234,9 +234,12 @@ nav a:hover {
   );
   border: 1px solid rgba(255,255,255,0.3);
   backdrop-filter: blur(4px);
-  animation: float 16s infinite ease-in-out;
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
   opacity: 0.5;
 }
+
 
 /* Random sizing & placement */
 .bubble:nth-child(1) { top: 10%; left: 15%; width: 120px; height: 120px; }
