@@ -1,25 +1,40 @@
+html,
+body {
+  height: 100%;
+  /* Makes the full page as tall as browser window */
+  min-height: 100%;
+  /* atleast the full height of the window */
+}
 
 body {
   margin: 0;
+  /* Remove default outer spacing */
   padding: 0;
+  /* Remove default inner spacing */
   font-family: Arial, sans-serif;
+  /* Set a clean, modern font */
   background-size: cover;
+  /* Ensure background image covers entire area */
   background-position: center;
+  /* Center the background image */
   background-attachment: fixed;
+  /* Fix background during scroll */
   background-color: #f9f9ff;
+  /* background color used if bg doesnt load*/
   color: #2a2a3c;
-   
+  /* Default text colour */
+
 }
 
 header {
   background: rgba(255, 255, 255, 0.65);
+  /* 65% white transparency */
   backdrop-filter: blur(10px);
+  /*Blur effect for background of header*/
   -webkit-backdrop-filter: blur(10px);
   padding: 18px 40px;
+  /* Padding inside header */
   color: #6a0dad;
-
-  border-bottom: 1px solid rgba(255,255,255,0.3);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 
@@ -27,301 +42,212 @@ header {
 
 .bg-image {
   position: fixed;
+  /* Fixed position to stay in place during scroll */
   inset: 0;
+  /* Cover the entire viewport */
   background-image: url("images/Jesus_teaching_parables.png");
   background-size: cover;
+  /* Ensure the image covers the entire area */
   background-position: center;
+  /* Center the background image */
   background-repeat: no-repeat;
+  /* Prevent image repetition */
 
   filter: blur(2px) brightness(0.75);
+  /* Blur and dim the image */
   transform: scale(1.06);
+  /* Slightly scale up to cover edges after blur */
   z-index: -2;
+  /* Place behind other content */
 }
 
 /* Soft white veil like divine fog ☁️ */
 body::before {
   content: "";
+  /* Empty content for pseudo-element */
   position: fixed;
   inset: 0;
-  background: rgba(255,255,255,0.65);
+  background: rgba(255, 255, 255, 0.65);
+  /* Semi-transparent white overlay */
   z-index: -1;
+  /* Place behind other content but above bg image */
 }
 
 
 .nav-container {
   display: flex;
+  /* Flexbox for layout */
   align-items: center;
+  /* Vertically center items */
   justify-content: space-between;
+  /* Space between logo and nav */
   position: relative;
+  /* For positioning search bar */
 }
 
 .logo h1 {
   margin: 0;
+  /* default margin */
   font-size: 1.8em;
+  /* Larger font size for logo */
   font-weight: bold;
+  /* Bold font for emphasis */
   color: #6a0dad;
   letter-spacing: 1px;
+  /* Slight spacing between letters */
 }
+
+/* ================= NAV SEARCH BAR ================= */
 
 .nav-search {
   position: absolute;
+  /* Removes element from normal flow so it can be freely positioned inside navbar */
+
   left: 50%;
+  /* Moves the element’s left edge to the horizontal center of its parent */
   transform: translateX(-50%);
+  /* Pulls it back by half its own width to achieve perfect centering */
+
   display: flex;
+  /* Places input and button in a single horizontal row */
+
   align-items: center;
+  /* Vertically centers items inside the search bar */
+
   gap: 6px;
+  /* Adds spacing between input and button without using margins */
+
   background-color: #ffffff;
+  /* Gives the search bar a clean white background */
+
   padding: 6px 10px;
+  /* Adds internal spacing so content doesn’t touch edges */
+
   border-radius: 8px;
+  /* Rounds the corners for a modern UI look */
+
   border: 1px solid #d5d5d5;
+  /* Subtle border to separate the search bar from the header */
 }
 
+
+/* ================= SEARCH INPUT FIELD ================= */
 
 .nav-search input {
   padding: 8px 12px;
+  /* Increases clickable and readable area inside input */
+
   border-radius: 5px;
+  /* Slight rounding for consistency with container */
+
   border: 1px solid #ccc;
+  /* Light border instead of browser default */
+
   outline: none;
+  /* Removes default blue focus outline */
+
   width: 220px;
+  /* Fixed width to maintain consistent layout */
+
   font-size: 0.95em;
+  /* Slightly smaller than default text */
+
   background-color: #ffffff;
+  /* Keeps input background clean */
+
   color: #6a0dad;
+  /* Matches site’s purple theme */
 }
 
+
+/* ================= PLACEHOLDER TEXT ================= */
 
 .nav-search input::placeholder {
   color: #6a1b9a;
+  /* Styles placeholder text separately to keep it visible but subtle */
 }
+
+
+/* ================= SEARCH BUTTON ================= */
 
 .nav-search button {
   padding: 8px 12px;
+  /* Comfortable click area */
+
   border: none;
+  /* Removes default button border */
+
   background-color: #6a0dad;
+  /* Primary theme color */
+
   color: white;
+  /* High contrast for readability */
+
   border-radius: 5px;
+  /* Rounded corners */
+
   cursor: pointer;
+  /* Indicates clickable element */
+
   transition: all 0.3s ease;
+  /* Smooth animation for hover effects */
 }
 
+
+/* ================= SEARCH BUTTON HOVER ================= */
 
 .nav-search button:hover {
   background-color: #4a0b7a;
+  /* Darkens button on hover for feedback */
+
   transform: scale(1.05);
+  /* Slight zoom effect to feel interactive */
 }
 
+
+/* ================= NAV MENU LIST ================= */
 
 nav ul {
   list-style: none;
+  /* Removes default bullet points */
+
   display: flex;
+  /* Places nav items in a row */
+
   gap: 20px;
+  /* Spacing between nav links */
+
   margin: 0;
+  /* Removes default browser margin */
 }
+
+
+/* ================= NAV LINKS ================= */
 
 nav a {
   color: #6a0dad;
+  /* Matches brand color */
+
   text-decoration: none;
+  /* Removes underline */
+
   font-weight: bold;
+  /* Makes links prominent */
+
   font-size: 1em;
+  /* Standard readable size */
+
   transition: color 0.3s, text-shadow 0.3s;
+  /* Smooth hover animation */
 }
 
+
+/* ================= NAV LINK HOVER ================= */
 
 nav a:hover {
-  color: #ff4b4b; 
+  color: #ff4b4b;
+  /* Accent color on hover */
+
   text-shadow: 0 0 8px rgba(255, 75, 75, 0.6);
+  /* Soft glow effect for emphasis */
 }
-
-.hero {
-  background: linear-gradient(135deg, #6a0dad, #8e24aa); 
-  height: 60vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white; 
-}
-
-.hero-text h2 {
-  font-size: 3em;
-  margin-bottom: 20px;
-  color: white;
-}
-
-.hero-text p {
-  font-size: 1.5em;
-  max-width: 600px;
-  color: #f3e6ff;
-}
-
-.hero-text .bible-verse {
-  font-size: 1em;
-  color: #f2e6ff;
-  opacity: 0.85;
-  letter-spacing: 0.3px;
-}
-
-
-.featured {
-  padding: 40px;
-  text-align: center;
-}
-
-.featured h3 {
-  font-size: 2em;
-  color: #7b2cbf;
-  margin-bottom: 20px;
-}
-
-.featured ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.featured li {
-  margin-bottom: 10px;
-}
-
-.featured a {
-  color: #6a0dad;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s, text-shadow 0.3s;
-}
-
-.featured a:hover {
-  color: #c1121f;
-  text-shadow: 0 0 6px rgba(193, 18, 31, 0.5);
-}
-
-.verse-section {
-  padding: 90px 0;
-  display: flex;
-  justify-content: center;
-}
-
-.verse-card {
-  background: white;
-  color: #3f1b70; 
-  padding: 40px 35px;
-  width: 80%;
-  max-width: 750px;
-  text-align: center;
-  border-radius: 20px;
-  border: 2px solid rgba(128, 0, 128, 0.25); 
-  box-shadow: 0 4px 20px rgba(128, 0, 128, 0.15); 
-  position: relative;
-}
-
-
-.verse-card::before {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: #c62828; 
-  border-radius: 50%;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  opacity: 0.8;
-}
-
-.verse-card h2 {
-  font-size: 1.9rem;
-  margin-bottom: 15px;
-}
-
-.verse-card p {
-  font-size: 1.4rem;
-  line-height: 1.5;
-  margin-bottom: 10px;
-}
-
-.verse-ref {
-  font-size: 1.1rem;
-  color: #7a4ccf; 
-}
-
-footer {
-  background-color: #6a0dad;
-  color: #fff;
-  padding: 25px;
-  text-align: center;
-  font-size: 0.95em;
-  margin-top: 50px;
-}
-
-footer .contact-info ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-}
-
-footer a {
-  color: #ffb6c1;
-  text-decoration: none;
-}
-
-footer a:hover {
-  color: #fff;
-  text-shadow: 0 0 6px #c1121f;
-}
-
-
-.card-section {
-  padding: 60px 40px;
-  text-align: center;
-}
-
-.card-title {
-  font-size: 2.5em;
-  color: #4a148c;
-  margin-bottom: 40px;
-  font-weight: bold;
-}
-
-.card-grid {
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  max-width: 1100px;
-  margin: auto;
-}
-
-.feature-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  padding: 25px;
-  border-radius: 12px;
-  transition: all 0.3s ease;
-  cursor: pointer;
-  border: 1px solid rgba(255,255,255,0.4);
-  box-shadow: 0 0 0 rgba(128, 0, 128, 0);
-}
-
-
-.feature-card:hover {
-  box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
-  transform: translateY(-5px);
-  border: 1px solid #9c27b0;
-}
-
-.feature-card .icon {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.feature-card h3 {
-  font-size: 1.3em;
-  margin-bottom: 10px;
-  color: #4a148c;
-}
-
-.feature-card p {
-  font-size: 0.95em;
-  line-height: 1.4em;
-  color: #555;
-}
-
