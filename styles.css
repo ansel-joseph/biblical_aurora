@@ -11,9 +11,9 @@ body {
 
   background: linear-gradient(
     to bottom,
-    #0475ee,
-    #f8fbff,
-    #ffd064
+    #a5d8ff,
+    #ffffff,
+    #fff4c2
   );
 
   background-attachment: fixed;
@@ -144,13 +144,13 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white; 
+  color: rgb(234, 46, 159); 
 }
 
 .hero-text h2 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: white;
+  color: rgb(57, 29, 239);
 }
 
 .hero-text p {
