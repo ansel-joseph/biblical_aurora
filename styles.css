@@ -147,21 +147,43 @@ nav a:hover {
   color: rgb(234, 46, 159); 
 }
 
+.hero-text {
+  background: rgba(180, 215, 255, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  width: 75%;
+  max-width: 900px;
+
+  padding: 50px 60px;
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.55);
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
 .hero-text h2 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: rgb(57, 29, 239);
+  color: #0955d8;
+  -webkit-text-stroke: 1.2px #fed109;
 }
 
 .hero-text p {
   font-size: 1.5em;
   max-width: 600px;
-  color: #f3e6ff;
+  color: #7909e2;
+
+  margin: 0 auto;   
+
+  margin-bottom: 20px;
 }
 
 .hero-text .bible-verse {
   font-size: 1em;
-  color: #f2e6ff;
+  color: #7909e2;
   opacity: 0.85;
   letter-spacing: 0.3px;
 }
