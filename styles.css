@@ -139,13 +139,14 @@ nav a:hover {
     margin: 0 auto;
     text-align: center;
 
-    background: rgba(255,255,255,.18);
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 
-    padding: 55px 60px;
-    border-radius: 30px;
-    border: 1px solid rgba(255,255,255,.25);
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .hero h1{
