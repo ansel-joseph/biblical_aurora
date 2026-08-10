@@ -152,14 +152,20 @@ nav a:hover {
 
 .hero h1{
     font-size:4.5rem;
-    color:#0b4fc5;
-    margin-bottom:15px;
-    -webkit-text-stroke:1px #ffd84f;
-}
+    color:#0756c9;
 
+    -webkit-text-stroke:1.5px #ffd84f;
+
+    text-shadow:
+        0 3px 0 rgba(255,255,255,.8),
+        0 6px 18px rgba(0,0,0,.18);
+
+    margin-bottom:15px;
+}
 .hero-sub{
     font-size:1.35rem;
-    color:#4f4f6d;
+    color:white;
+    text-shadow:0 2px 8px rgba(0,0,0,.5);
     margin-bottom:40px;
 }
 
