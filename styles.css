@@ -116,7 +116,7 @@ nav a:hover {
     background-size:cover;
     background-position:center;
 
-    filter:brightness(.55);
+    filter:brightness(.85);
 
     z-index:-2;
 }
@@ -127,8 +127,9 @@ nav a:hover {
     inset:0;
 
     background:linear-gradient(
-        rgba(0,0,0,.15),
-        rgba(0,0,0,.35)
+        rgba(165,216,255,.15),
+        rgba(255,255,255,.05),
+        rgba(255,244,194,.12)
     );
 
     z-index:-1;
