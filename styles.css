@@ -35,32 +35,6 @@ header {
     box-sizing: border-box;
 }
 
-
-/* ===== PARABLES BACKGROUND ===== */
-
-.bg-image {
-  position: fixed; /* Fixed position to stay in place during scroll */
-  inset: 0; /* Cover the entire viewport */
-  background-image: url("images/Jesus_teaching_parables.png");
-  background-size: cover; /* Ensure the image covers the entire area */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent image repetition */
-
-  filter: blur(2px) brightness(0.75); /* Blur and dim the image */
-  transform: scale(1.06); /* Slightly scale up to cover edges after blur */ 
-  z-index: -2; /* Place behind other content */
-}
-
-/* Soft white veil like divine fog ☁️ */
-body::before {
-  content: ""; /* Empty content for pseudo-element */
-  position: fixed; 
-  inset: 0; 
-  background: rgba(255,255,255,0.65); /* Semi-transparent white overlay */
-  z-index: -1; /* Place behind other content but above bg image */
-}
-
-
 .nav-container{
     display:flex;
     align-items:center;
@@ -312,3 +286,136 @@ footer a:hover {
   text-shadow: 0 0 6px #c1121f;
 }
 
+/* ===== PARABLES PAGE ===== */
+
+.parables-intro {
+    text-align: center;
+    padding: 70px 20px 50px;
+}
+
+.parables-intro h1 {
+    font-size: 3.5rem;
+    color: #0b4fc5;
+    margin-bottom: 20px;
+    -webkit-text-stroke: 1px #ffd84f;
+}
+
+.parables-intro p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+
+/* ===== PARABLE LIST ===== */
+
+.parables-list {
+    width: 85%;
+    max-width: 1200px;
+    margin: 40px auto 100px;
+}
+
+
+/* ===== PARABLE RECTANGLE ===== */
+
+.parable-card {
+    position: relative;
+
+    min-height: 420px;
+    margin-bottom: 60px;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
+
+    transition: .4s ease;
+}
+
+.parable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 50px rgba(0,0,0,.2);
+}
+
+
+/* ===== DARK OVERLAY ===== */
+
+.parable-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        90deg,
+        rgba(0,0,0,.65),
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.05)
+    );
+
+    z-index: 0;
+}
+
+
+/* ===== TEXT ===== */
+
+.parable-text {
+    position: relative;
+    z-index: 1;
+
+    max-width: 550px;
+    padding: 50px;
+    color: white;
+}
+
+.parable-text h2 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+
+    color: white;
+
+    -webkit-text-stroke: 1px #ffd84f;
+
+    text-shadow: 0 3px 12px rgba(0,0,0,.5);
+}
+
+.parable-text p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 25px;
+
+    color: white;
+
+    text-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+
+
+/* ===== BUTTON ===== */
+
+.parable-text a {
+    display: inline-block;
+
+    padding: 13px 26px;
+
+    background: rgba(11,99,209,.9);
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    transition: .3s ease;
+}
+
+.parable-text a:hover {
+    background: #0848a0;
+    transform: translateY(-3px);
+}
