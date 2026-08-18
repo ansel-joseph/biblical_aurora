@@ -69,6 +69,76 @@ nav a:hover {
   color: #ff4b4b; 
   text-shadow: 0 0 8px rgba(255, 75, 75, 0.6);
 }
+
+/* ===== NAV SEARCH ===== */
+
+.nav-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 6px;
+
+    background: rgba(255, 255, 255, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.08),
+        inset 0 1px 1px rgba(255, 255, 255, 0.7);
+
+    transition: 0.3s ease;
+}
+
+.nav-search:focus-within {
+    box-shadow:
+        0 10px 30px rgba(11, 99, 209, 0.15),
+        0 0 0 2px rgba(11, 99, 209, 0.12);
+}
+
+.nav-search input {
+    width: 240px;
+
+    padding: 11px 16px;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.nav-search input::placeholder {
+    color: #777;
+}
+
+.nav-search button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #0b63d1;
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.nav-search button:hover {
+    background: #0848a0;
+    transform: scale(1.08);
+}
+
 .hero{
     position: relative;
 
@@ -419,4 +489,178 @@ footer a:hover {
 .parable-card:hover .parable-button {
     background: #0848a0;
     transform: translateY(-3px);
+}
+
+/* =========================================
+   INDIVIDUAL PARABLE PAGE
+========================================= */
+
+
+/* ===== HERO ===== */
+
+.parable-hero {
+    width: 90%;
+    max-width: 1250px;
+    margin: 70px auto 100px;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+.parable-hero-image {
+    flex: 1;
+}
+.parable-hero-image img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 35px;
+    display: block;
+    box-shadow:
+        0 25px 50px rgba(0,0,0,.15);
+}
+.parable-hero-text {
+    flex: 1;
+}
+.eyebrow {
+    font-size: .85rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #0b63d1;
+    margin-bottom: 15px;
+}
+.parable-hero-text h1 {
+    font-size: 4rem;
+    margin: 0 0 15px;
+    color: #0b4fc5;
+    -webkit-text-stroke: 1px #ffd84f;
+}
+.reference {
+    font-weight: bold;
+    color: #777;
+    font-size: 1.05rem;
+}
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #555;
+    margin-top: 30px;
+}
+/* ===== GENERAL STUDY SECTION ===== */
+.study-section {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 100px;
+}
+.study-content h2 {
+    font-size: 2.5rem;
+    color: #0b4fc5;
+    margin-bottom: 25px;
+}
+.study-content p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #444;
+    margin-bottom: 20px;
+}
+/* ===== BIBLE PASSAGE ===== */
+.passage-section {
+    width: 100%;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    background: rgba(255, 244, 194, .35);
+}
+.passage-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+.passage-box h2 {
+    font-size: 2rem;
+
+    color: #0b4fc5;
+}
+.passage-box blockquote {
+    margin: 40px auto;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-style: italic;
+
+    color: #444;
+}
+.passage-note {
+    color: #777;
+    font-weight: bold;
+}
+/* ===== MEANING ===== */
+.meaning-section {
+    width: 100%;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    background: rgba(165, 216, 255, .25);
+}
+.meaning-content {
+    max-width: 850px;
+    margin: auto;
+}
+.meaning-content h2 {
+    font-size: 2.8rem;
+    color: #0b4fc5;
+    margin-bottom: 30px;
+}
+.meaning-content p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #444;
+}
+/* ===== THEMES ===== */
+.themes-section {
+    width: 85%;
+    max-width: 1100px;
+    margin: 100px auto;
+    text-align: center;
+}
+.themes-section > h2 {
+    font-size: 2.8rem;
+    color: #0b4fc5;
+    margin-bottom: 50px;
+}
+.themes-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.theme {
+    flex: 1;
+    padding: 35px;
+    border-radius: 25px;
+    background: rgba(255,255,255,.55);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.7);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,.08);
+}
+.theme h3 {
+    font-size: 1.5rem;
+    color: #0b63d1;
+}
+.theme p {
+    color: #555;
+    line-height: 1.6;
+}
+/* ===== REFLECTION ===== */
+.reflection-section {
+    width: 80%;
+    max-width: 850px;
+    margin: 100px auto;
+}
+.reflection-section h2 {
+    font-size: 2.5rem;
+    color: #0b4fc5;
+    margin-bottom: 35px;
+}
+.reflection-section li {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #444;
 }
