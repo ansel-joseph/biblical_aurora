@@ -334,6 +334,9 @@ footer a:hover {
 
     display: flex;
     align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 
     box-shadow: 0 15px 40px rgba(0,0,0,.15);
 
@@ -400,7 +403,7 @@ footer a:hover {
 
 /* ===== BUTTON ===== */
 
-.parable-text a {
+.parable-button {
     display: inline-block;
 
     padding: 13px 26px;
@@ -408,14 +411,12 @@ footer a:hover {
     background: rgba(11,99,209,.9);
     color: white;
 
-    text-decoration: none;
-
     border-radius: 30px;
 
     transition: .3s ease;
 }
 
-.parable-text a:hover {
+.parable-card:hover .parable-button {
     background: #0848a0;
     transform: translateY(-3px);
 }
